@@ -112,7 +112,7 @@ char getTriangleType(int side1, int side2, int side3) {
 
 /* This function calculates the area of a triangle using the lengths of its three sides provided as input parameters. */
 double getArea(int side1, int side2, int side3) {
-	/* If this function is called using invalid side lengths, it simply returns 0*/
+	/* If this function is called using invalid side lengths, return 0 */
 	if (side1 <= 0 || side2 <= 0 || side3 <= 0) {
 		return 0;
 	}
@@ -124,15 +124,25 @@ double getArea(int side1, int side2, int side3) {
 /*
 *	Test Cases
 *
-*	Case 1: User Inputs 0 / Negative Number for Side Length
+*	Case 1: User Inputs Negative Number for Side Length
 *
 *	```c
 *	Enter Side #1: -2
 *
 *	ERROR: Length Must Be Greater Than 0
 *	```
+* 
+* 
+*	Case 2: User Inputs 0 for Side Length
+* 
+*	```c
+*	Enter Side #1: 0
 *
-*	Case 2: Cannot Form Valid Triangle From User-Input Lengths
+*	ERROR: Length Must Be Greater Than 0
+*	```
+*
+* 
+*	Case 3: Cannot Form Valid Triangle From User-Input Lengths
 *
 *	```c
 *	Enter Side #1: 1
@@ -143,12 +153,55 @@ double getArea(int side1, int side2, int side3) {
 *	Side #2: 2
 *	Side #3: 3
 *	ERROR: The side lengths do not form a valid triangle
-*
-*	Would you like to run the program again?
-*	Enter 'Y' for Yes and 'N' for No:
 *	```
 *
-*	Case 3: Invalid User-Input for Re-Running Program
+* 
+*	Case 4: Valid Scalene
+* 
+*	```c
+*	Enter Side #1: 3
+*	Enter Side #2: 4
+*	Enter Side #3: 5
+*
+*	Side #1: 3
+*	Side #2: 4
+*	Side #3: 5
+*	Triangle Type: Scalene
+*	Area: 6.00 Square Units
+*	```
+* 
+* 
+*	Case 5: Valid Isosceles
+* 
+*	```c
+*	Enter Side #1: 5
+*	Enter Side #2: 5
+*	Enter Side #3: 7
+*
+*	Side #1: 5
+*	Side #2: 5
+*	Side #3: 7
+*	Triangle Type: Isosceles
+*	Area: 12.50 Square Units
+*	```
+* 
+* 
+*	Case 6: Valid Equilateral
+* 
+*	```c
+*	Enter Side #1: 11
+*	Enter Side #2: 11
+*	Enter Side #3: 11
+*
+*	Side #1: 11
+*	Side #2: 11
+*	Side #3: 11
+*	Triangle Type: Equilateral
+*	Area: 52.39 Square Units
+*	```
+* 
+* 
+*	Case 7: Invalid User-Input for Re-Running Program
 * 
 *	```c
 *	Would you like to run the program again?
@@ -161,16 +214,6 @@ double getArea(int side1, int side2, int side3) {
 *	
 *	Enter Side #1:
 *	```
-*
-*
-*
-*
-*
-*
-*
-*
-*
-*
 *
 *
 *
