@@ -21,6 +21,6 @@ This C program classifies triangles as Equilateral, Isosceles, Scalene, or Inval
 
 **Complexity Analysis:** Time Complexity: O(1), Space Complexity: O(1).
 
-### Benefits Over Alternative Approaches
+## Benefits Over Alternative Approaches
 
 This approach emphasizes input validation, readability, and efficiency by using well-defined functions for each task and constants for triangle types, which enhances maintainability and reduces error likelihood.

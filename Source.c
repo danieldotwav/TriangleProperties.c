@@ -75,6 +75,7 @@ int main(void) {
 	return 0;
 }
 
+/* This function loops until the user enters a non-negative number */
 int getValidSide(int sideNumber) {
 	int validLength = 0;
 
@@ -89,10 +90,7 @@ int getValidSide(int sideNumber) {
 	return validLength;
 }
 
-/*
-This function takes in three side lengths and determines the type of triangle formed
-E = Equilateral, S = Scalene, I = Isosceles, and N = None (or invalid)
-*/
+/* This function takes in three side lengths and determines the type of triangle formed */
 char getTriangleType(int side1, int side2, int side3) {
 	char type = INVALID;
 	/* First, check if the side lengths can form a valid triangle */
@@ -128,7 +126,7 @@ double getArea(int side1, int side2, int side3) {
 *
 *	Case 1: User Inputs 0 / Negative Number for Side Length
 *
-*	```cpp
+*	```c
 *	Enter Side #1: -2
 *
 *	ERROR: Length Must Be Greater Than 0
@@ -136,7 +134,7 @@ double getArea(int side1, int side2, int side3) {
 *
 *	Case 2: Cannot Form Valid Triangle From User-Input Lengths
 *
-*	```cpp
+*	```c
 *	Enter Side #1: 1
 *	Enter Side #2: 2
 *	Enter Side #3: 3
@@ -150,8 +148,19 @@ double getArea(int side1, int side2, int side3) {
 *	Enter 'Y' for Yes and 'N' for No:
 *	```
 *
+*	Case 3: Invalid User-Input for Re-Running Program
+* 
+*	```c
+*	Would you like to run the program again?
+*	Enter 'Y' for Yes and 'N' for No: a
 *
+*	ERROR: Invalid Selection
 *
+*	Would you like to run the program again?
+*	Enter 'Y' for Yes and 'N' for No: Y
+*	
+*	Enter Side #1:
+*	```
 *
 *
 *
