@@ -75,7 +75,7 @@ int main(void) {
 	return 0;
 }
 
-/* This function loops until the user enters a non-negative number */
+/* Loops until the user enters a non-negative number */
 int getValidSide(int sideNumber) {
 	int validLength = 0;
 
@@ -90,7 +90,7 @@ int getValidSide(int sideNumber) {
 	return validLength;
 }
 
-/* This function takes in three side lengths and determines the type of triangle formed */
+/* Determines the type of triangle formed based on the three parameters passed in */
 char getTriangleType(int side1, int side2, int side3) {
 	char type = INVALID;
 	/* First, check if the side lengths can form a valid triangle */
@@ -99,18 +99,18 @@ char getTriangleType(int side1, int side2, int side3) {
 		if (side1 == side2 && side2 == side3) {
 			type = EQUILATERAL;
 		}
-		else if (side1 != side2 && side1 != side3 && side2 != side3) {
-			type = SCALENE;
+		else if (side1 == side2 || side1 == side3 || side2 == side3) {
+			type = ISOSCELES;
 		}
 		else {
-			/* If it's not an equilateral triangle, and not a scalene triangle, it must be an isosceles triangle */
-			type = ISOSCELES;
+			/* If it's not an Equilateral or Isosceles triangle, it must be a Scalene */
+			type = SCALENE;
 		}
 	}
 	return type;
 }
 
-/* This function calculates the area of a triangle using the lengths of its three sides provided as input parameters. */
+/* Calculates the area of a triangle using the lengths of its three sides provided as input parameters. */
 double getArea(int side1, int side2, int side3) {
 	/* If this function is called using invalid side lengths, return 0 */
 	if (side1 <= 0 || side2 <= 0 || side3 <= 0) {
