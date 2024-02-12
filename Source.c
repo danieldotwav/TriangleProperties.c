@@ -201,7 +201,7 @@ double getArea(int side1, int side2, int side3) {
 *	```
 * 
 * 
-*	Case 7: Invalid User-Input for Re-Running Program
+*	Case 7: Invalid User-Input for Repeating the Program
 * 
 *	```c
 *	Would you like to run the program again?
@@ -229,6 +229,34 @@ double getArea(int side1, int side2, int side3) {
 *	Area: 0.00 Square Units
 *
 *
+*	Case 9: Repeating the Program With Different Inputs
 *
+*	```c
+*	Enter Side #1: 3
+*	Enter Side #2: 4
+*	Enter Side #3: 5
+*
+*	Side #1: 3
+*	Side #2: 4
+*	Side #3: 5
+*	Triangle Type: Scalene
+*	Area: 6.00 Square Units
+*	
+*	Would you like to run the program again ?
+*	Enter 'Y' for Yes and 'N' for No : Y
+*
+*	Enter Side #1: 2
+*	Enter Side #2: 2
+*	Enter Side #3: 2
+*
+*	Side #1: 2
+*	Side #2: 2
+*	Side #3: 2
+*	Triangle Type: Equilateral
+*	Area: 1.73 Square Units
+* 
+*	Would you like to run the program again ?
+*	Enter 'Y' for Yes and 'N' for No:
+*	```
 *
 */
