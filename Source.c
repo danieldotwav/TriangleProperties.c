@@ -216,6 +216,18 @@ double getArea(int side1, int side2, int side3) {
 *	```
 *
 *
+*	Case 8: Extremely Small and Large Side Lengths
+* 
+*	Enter Side #1: 1
+*	Enter Side #2: 10000
+*	Enter Side #3: 10000
+*
+*	Side #1: 1
+*	Side #2: 10000
+*	Side #3: 10000
+*	Triangle Type: Isosceles
+*	Area: 0.00 Square Units
+*
 *
 *
 *
