@@ -20,7 +20,7 @@ int main(void) {
 	char triangleType;
 
 	/* Main Loop */
-	while (repeat == 'Y') {
+	while (repeat == 'Y' || repeat == 'y') {
 		/* Prompt the user for side lengths */
 		side1 = getValidSide(1);
 		side2 = getValidSide(2);
@@ -67,7 +67,7 @@ int main(void) {
 			if (repeat != 'Y' && repeat != 'N') {
 				printf("\nERROR: Invalid Selection\n\n");
 			}
-		} while (repeat != 'Y' && repeat != 'N');
+		} while (repeat != 'Y' && repeat != 'y' && repeat != 'N' && repeat != 'n');
 		printf("\n");
 	}
 
