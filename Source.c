@@ -61,10 +61,11 @@ int main(void) {
 
 		/* Ask the user if they'd like to repeat the program */
 		do {
+			/* scanf("%d %d %d%*c", &side1, &side2, &side3); */
 			printf("Would you like to run the program again?\nEnter 'Y' for Yes and 'N' for No: ");
 			scanf(" %c", &repeat); /* The space before the c ensures any newline character is consumed before attempting to read the repeat character */
 
-			if (repeat != 'Y' && repeat != 'N') {
+			if (repeat != 'Y' && repeat != 'y' && repeat != 'N' && repeat != 'n') {
 				printf("\nERROR: Invalid Selection\n\n");
 			}
 		} while (repeat != 'Y' && repeat != 'y' && repeat != 'N' && repeat != 'n');
@@ -259,4 +260,111 @@ double getArea(int side1, int side2, int side3) {
 *	Enter 'Y' for Yes and 'N' for No:
 *	```
 *
+*/
+
+/*
+Sample Output
+
+Welcome User!
+
+Enter Side #1: 1
+Enter Side #2: 2
+Enter Side #3: 3
+
+Side #1: 1
+Side #2: 2
+Side #3: 3
+ERROR: The side lengths do not form a valid triangle
+
+Would you like to run the program again?
+Enter 'Y' for Yes and 'N' for No: 2
+
+ERROR: Invalid Selection
+
+Would you like to run the program again?
+Enter 'Y' for Yes and 'N' for No: y
+
+Enter Side #1: 3
+Enter Side #2: 4
+Enter Side #3: 5
+
+Side #1: 3
+Side #2: 4
+Side #3: 5
+Triangle Type: Scalene
+Area: 6.00 Square Units
+
+Would you like to run the program again?
+Enter 'Y' for Yes and 'N' for No: Y
+
+Enter Side #1: 0
+
+ERROR: Length Must Be Greater Than 0
+
+Enter Side #1: -12
+
+ERROR: Length Must Be Greater Than 0
+
+Enter Side #1: 111111111
+Enter Side #2: 222222222
+Enter Side #3: 333333333
+
+Side #1: 111111111
+Side #2: 222222222
+Side #3: 333333333
+ERROR: The side lengths do not form a valid triangle
+
+Would you like to run the program again?
+Enter 'Y' for Yes and 'N' for No: y
+
+Enter Side #1: 7
+Enter Side #2: 8
+Enter Side #3: 9
+
+Side #1: 7
+Side #2: 8
+Side #3: 9
+Triangle Type: Scalene
+Area: 26.83 Square Units
+
+Would you like to run the program again?
+Enter 'Y' for Yes and 'N' for No: Y
+
+Enter Side #1: 10
+Enter Side #2: 10
+Enter Side #3: 10
+
+Side #1: 10
+Side #2: 10
+Side #3: 10
+Triangle Type: Equilateral
+Area: 43.30 Square Units
+
+Would you like to run the program again?
+Enter 'Y' for Yes and 'N' for No: 10
+
+ERROR: Invalid Selection
+
+Would you like to run the program again?
+Enter 'Y' for Yes and 'N' for No:
+ERROR: Invalid Selection
+
+Would you like to run the program again?
+Enter 'Y' for Yes and 'N' for No: Y
+
+Enter Side #1: 10
+Enter Side #2: 9
+Enter Side #3: 10
+
+Side #1: 10
+Side #2: 9
+Side #3: 10
+Triangle Type: Isosceles
+Area: 40.19 Square Units
+
+Would you like to run the program again?
+Enter 'Y' for Yes and 'N' for No: N
+
+Terminating Program...
+
 */
